@@ -27,6 +27,8 @@ angular
 
 ## Instructions
 Le projet est constitue de deux dossiers l'un pour le frontend. utilisant le framework angular. Le projet compilé se trouve dans dist. Par contre le dossier src presente les components et autres ayant servis pour le developpement. 
+Pour le frontend on a une interface de connexion point d'entree. Ensuite la page d'émargement. Une interface pour la creation des nouveaux utilisateurs et enfin une autre pour receoir le total d'heures. Il ya une couche d'autoristaion pour la creation des utilsateurs et voir le nombre d'heures. Il faut le droit admin ou d'apres le sql le role 2.
+
 Le dossier concernant le backend presente le travail fait sous node js.
 le port utilise est le 3000. Il sous Postgresql donc il faut creer un utilisateur et base de donnée 'diagauto'. Vous pourrez importer le fichier pgsql ou l'utiliser pour creer les tables users et checklist.
 Les données envoyes au serveur sont format json.
