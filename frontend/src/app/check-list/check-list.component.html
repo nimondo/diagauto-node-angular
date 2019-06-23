@@ -1,0 +1,25 @@
+<div style="text-align:center" class="col-md-10 offset-2">
+<h2>Cliquer pour émarger</h2>
+<ul class="list-group">
+<li class="list-group-item" *ngFor="let checkInfo of checkInfos;">
+  <table class="table  table-striped table-condensed">
+    <thead>
+      <tr><th></th><th></th><th></th><th></th><th></th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ checkInfo.name }}</td>
+        <td>{{ checkInfo.username }}</td>
+        <td>{{ checkInfo.email }}</td>
+        <td><button class="btn btn-success"
+			[disabled]="checkInfo.afternoon < checkInfo.morning || checkInfo.afternoon > checkInfo.morning || checkInfo.users_id !== userId"
+           (click)="onCheckMorning(checkInfo.id,checkInfo.users_id,checkInfo.afternoon)" >MATIN </button></td>
+        <td><button class="btn btn-danger"
+		   [disabled]="checkInfo.afternoon>=checkInfo.morning || checkInfo.users_id !== userId "
+		(click)="onCheckAfternoon(checkInfo.id,checkInfo.users_id,checkInfo.morning)">SOIR </button></td>
+      </tr>
+    </tbody>
+  </table>
+</li>
+</ul>
+</div>

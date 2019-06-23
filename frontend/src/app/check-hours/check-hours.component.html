@@ -1,0 +1,62 @@
+<div class="col-md-10">
+  <form  *ngIf="!checkverifySubmit"  [formGroup]="checkHoursForm" (ngSubmit)="onSubmitForm()" class="form-inline">
+  <legend>Période de </legend>
+    <div class="form-group">
+      <label for="jour1" class="col-md-3">Jour</label>
+	  <div class="col-md-5">
+      <input type="number" id="jour1" class="form-control" formControlName="jour1">
+	  </div>
+    </div>
+    <div class="form-group">
+      <label for="mois1" class="col-md-3">Mois</label>
+	  <div class="col-md-5">
+      <input type="number" id="mois1" class="form-control" formControlName="mois1">
+	  </div>
+    </div>
+    <div class="form-group">
+      <label for="annee1" class="col-md-3">Année</label>
+	  <div class="col-md-5">
+      <input type="number" id="annee1" class="form-control" formControlName="annee1">
+     </div>
+	</div>
+	<legend>à</legend>
+	<div class="form-group">
+      <label for="jour2" class="col-md-3">Jour</label>
+	  <div class="col-md-5">
+      <input type="number" id="jour2" class="form-control" formControlName="jour2">
+	  </div>
+    </div>
+	<div class="form-group">
+      <label for="mois2" class="col-md-3">Mois</label>
+	  <div class="col-md-5">
+      <input type="number" id="mois2" class="form-control" formControlName="mois2">
+	  </div>
+    </div>
+	<div class="form-group">
+      <label for="annee2" class="col-md-3">Année</label>
+	  <div class="col-md-5">
+      <input type="number" id="annee2" class="form-control" formControlName="annee2">
+	  </div>
+    </div>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="submit" class="btn btn-primary" [disabled]="checkHoursForm.invalid">Voir</button>
+  </form>
+  
+  <ul class="list-group" *ngIf="checkverifySubmit">
+  <li class="list-group-item" *ngFor="let checkHoraire of checkHoraires;">
+  <table class="table  table-striped table-condensed">
+    <thead>
+      <tr><th></th><th></th><th></th><th></th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ checkHoraire.name }}</td>
+        <td>{{ checkHoraire.username }}</td>
+        <td>{{ checkHoraire.email }}</td>
+        <td>heures - {{ (checkHoraire.nb_heure.hours)|| '00' }}:{{ (checkHoraire.nb_heure.minutes) || '00' }}:{{ (checkHoraire.nb_heure.seconds) || '00' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</li>
+</ul>
+</div>
