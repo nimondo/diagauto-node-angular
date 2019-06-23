@@ -9,18 +9,33 @@
 - [Files](#file)
 
 ## Intro
+La compagnie FIEDLER AMS souhaiterait se doter d’un système de pointage pour
+contrôler les heures de présence effectives de ses employés.
+1. Le système fonctionnera avec une tablette et sera connecté à une base de données.
+2. Les employés cliqueront sur leur nom sur la tablette à leur arrivée puis à leur départ
+du lieu de travail.
+3. Les heures d’arrivée et heures de départ seront enregistrées dans la base données.
+4. Le système devra aussi permettre au service comptabilité de FIEDLER AMS de
+savoir le nombre total d’heures de présence de n’importe quel employé au cours du
+mois.
+5. Votre tâche est de créer un prototype dudit système incluant une interface web.
 
-Une application API RESTful avec node js.  Cette application permet de creer un utilisateur, modifier ses informations et supprimer.
+## Requirements
+Postgresql
+node js
+angular 
 
 ## Instructions
+Le projet est constitue de deux dossiers l'un pour le frontend. utilisant le framework angular. Le projet compilé se trouve dans dist. Par contre le dossier src presente les components et autres ayant servis pour le developpement. 
+Le dossier concernant le backend presente le travail fait sous node js.
+le port utilise est le 3000. Il sous Postgresql donc il faut creer un utilisateur et base de donnée 'diagauto'. Vous pourrez importer le fichier pgsql ou l'utiliser pour creer les tables users et checklist.
+Les données envoyes au serveur sont format json.
+le fichier index.js liste les routes et le queries servira de modele pour la base de donnees.
 
-En termes de structure :
-
-Cette application contient renvoie des données au format json. Des URLS permmettent de tester cette application a l'aide du serveur Node.js ET POSTMAN.
 ##  file 
 
- --run node index.js. the app listen on port 3000
+ --run node index.js. the app listen on port 3000 on backend
  
- --see [LogRocket](https://blog.logrocket.com/setting-up-a-restful-api-with-node-js-and-postgresql-d96d6fc892d8/) to know to install postgres sql and create table.
+ -- run index.html on the frontend/dist/diagauto
  
 [(Back to TOP)](#table-of-contents)
