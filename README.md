@@ -1,4 +1,4 @@
-# Angular: BLOG PROJECT
+# Angular: DIAGAUTO PROJECT
 
 ## Table of Contents
 
